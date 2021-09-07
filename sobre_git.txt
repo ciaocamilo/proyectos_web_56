@@ -41,3 +41,22 @@ git push origin desarrollo
 git fetch
 git pull
 git log
+
+-- Para merge --
+
+git status
+git fetch
+git pull
+
+git checkout Nata_R
+git checlout desarrollo
+
+git merge Nata_R --> Actualizar rama desarrollo
+git push origin desarrollo
+
+git merge desarrollo --> Actualizar rama Nata_R
+git push origin Nata_R
+
+----------------Para SuperLog------------------------------------------------------------------------------------------------------------------
+git config --global alias.superlog "log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+-----------------------------------------------------------------------------------------------------------------------------------------------
