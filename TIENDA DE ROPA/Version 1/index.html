@@ -2,14 +2,17 @@
     <head>
         <meta charset="utf-8">
         <title>La tienda de Ropa 56</title>
+        <link rel="icon" href="imagenes/favicon.png" type="image/png" />
     </head>
     <body>
-        <h1>Tienda 56</h1>
-        <h3>Mi tienda de Ropa</h3>
-        <!--
-        <img src="https://www.porlastiendas.com/shop/wp-content/uploads/2018/05/la-tienda-de-henar-banner-V18-1700x420-1-1.jpg" height="200" width="500" alt="Banner de la tienda">
-        -->
-        <img src="imagenes/banner.jpg" height="200" width="500" alt="Banner de la tienda">
+        <div id="banner">
+            <h1>Tienda 56</h1>
+            <h3>Mi tienda de Ropa</h3>
+            <!--
+            <img src="https://www.porlastiendas.com/shop/wp-content/uploads/2018/05/la-tienda-de-henar-banner-V18-1700x420-1-1.jpg" height="200" width="500" alt="Banner de la tienda">
+            -->
+            <img src="imagenes/banner.jpg" height="200" width="100%" alt="Banner de la tienda">
+        </div>
         <!--
         <table>
             <tr>
@@ -26,13 +29,31 @@
             </tr>
         </table>
         -->
-        <table>
-            <tr>
-                <th><a href="index.html">Inicio</a></th>
-                <th><a href="clientes.html" >Clientes</a></th>
-                <th><a href="productos.html">Productos</a></th>
-                <th><a href="carrito.html">Carrito de compras</a></th>
-            </tr>
-        </table>
+        <div id="seccion_menu">
+            <table id="menu">
+                <tr>
+                    <th><a href="index.html">Inicio</a></th>
+                    <th><a href="clientes.html" >Clientes</a></th>
+                    <th><a href="productos.html">Productos</a></th>
+                    <th><a href="carrito.html">Carrito de compras</a></th>
+                </tr>
+            </table>
+        </div>
+        <div id="seccion_menu_lateral"></div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="clientes.html" >Clientes</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="carrito.html">Carrito de compras</a></li>
+            </ul>
+        </div>
+        <div id="video">
+            <!-- <iframe width="1008" height="480" src="https://www.youtube.com/embed/itMakY5PtsI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/itMakY5PtsI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <footer>
+            <p>Autores: MisiónTIC 2022 - Grupo 56</p>
+            <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+        </footer>
     </body>
 </html>
