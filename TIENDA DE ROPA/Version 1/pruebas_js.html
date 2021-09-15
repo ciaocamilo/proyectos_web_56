@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <title>Mis pruebas JavaScript</title>
+    </head>
+    <body>
+        <h1>Mis Pruebas JS</h1>
+        <p id="mi_parrafo">
+            ¡Hola!
+        </p>
+        <div id="icono">
+            <i class="las la-cart-arrow-down icono-grande" onclick="mostrarMensaje()"></i>
+        </div>
+    </body>
+    <script type="text/javascript">
+        // alert("Hola JS");
+        let nombre_cliente = 'Pepito';
+        console.log('Hola consola');
+        var mi_variable = 8;
+        let numero = 45;
+        let numero_decimal = 4.56;
+        let mi_booleano = true;
+        let saludo = 'Hola a todos!';
+        let arreglo = [7, 9, 'libro'];
+        console.log(arreglo);
+        console.log('La posición 2 del arreglo es = ' + arreglo[2]);
+        arreglo.push('Nuevo elemento');
+        console.log(arreglo);
+        saludo = 'ddj';
+        let mi_objeto = { nombre: 'Objeto uno', identificacion: 456, mi_arreglo: arreglo }
+        console.log(mi_objeto);
+        console.log(mi_objeto.nombre);
+        console.log(mi_objeto.mi_arreglo[2]);
+        let mi_objeto_2 = { id: 1230, nombre: 'El segundo objeto', mi_primer_objeto: mi_objeto };
+        console.log(mi_objeto_2);
+        console.log('Elemento interior = ' + mi_objeto_2.mi_primer_objeto.mi_arreglo[4]);
+        console.error('Falló!');
+
+        /*if (numero !== 10)*/
+        if (numero === 10) {
+            // alert('El número es igual a 10');
+        } else {
+            // alert('El número es diferente');
+        }
+
+        for (i=0; i < arreglo.length; i++) {
+            console.log(arreglo[i]);
+        }
+
+        // let el_texto = document.getElementById('mi_parrafo').textContent;
+        let el_texto = document.getElementById('mi_parrafo').innerText;
+        let texto_2 = mi_parrafo.innerText;
+        console.log(el_texto);
+        console.log(texto_2);
+
+        document.getElementById('mi_parrafo').textContent  = 'Chao';
+        mi_parrafo.innerText = 'Hola de Nuevo ' + nombre_cliente;
+
+        function mostrarMensaje() {
+            // alert('Hola, soy la función');
+            Swal.fire(
+                'Buen trabajo!',
+                'El botón funciona correctamente!',
+                // success,
+                // 'warning'
+                // 'error'
+                'info'
+                );
+        }
+
+        // mostrarMensaje();
+
+    </script>
+</html>
+<style>
+    .icono-grande {
+        font-size: 64px;
+        border-style: outset;
+        background-color: gold;
+    }
+</style>
