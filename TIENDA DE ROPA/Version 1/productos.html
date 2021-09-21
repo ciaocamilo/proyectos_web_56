@@ -1,12 +1,23 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Productos</title>
         <link rel="icon" href="imagenes/favicon.png" type="image/png" />
         <link rel="stylesheet" type="text/css" href="estilos/menu.css">
+        <link rel="stylesheet" type="text/css" href="estilos/estilos.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     </head>
     <body>
-        <h1>Productos</h1>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <div id="banner">
+            <h1 class="titulos">Tienda 56</h1>
+            <h3>Mi tienda de Ropa</h3>
+            <img src="imagenes/banner.jpg" height="200" width="100%" alt="Banner de la tienda">
+        </div>
         <div id="seccion_menu">
             <table id="navBar">
                 <tr>
@@ -16,6 +27,88 @@
                     <th><a href="carrito.html">Carrito de compras</a></th>
                 </tr>
             </table>
+        </div>
+        <h1>Productos</h1>
+        <div id="galeria" class="container">
+            <div class="row fila-productos">
+                <div class="col-lg-3 tarjeta-producto">
+                    <img src="imagenes/productos/camisa.jpg" class="imagen-producto">
+                    <h2 class="nombre-producto">Camisa</h2>
+                    <h4 class="precio-producto">$45.000</h4>
+                    <div class="descripcion-producto">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, laborum sequi reprehenderit exercitationem tempore</p>
+                    </div>
+                    <div class="div-cantidad">
+                        <input class="input-cantidad" id="cantidad_1" type="number">
+                    </div>
+                    <div id="icono" class="div-icono">
+                        <i class="las la-cart-arrow-down icono-grande" onclick="mostrarMensaje()"></i>
+                        <p><b>Agregar al carrito</b></p>
+                    </div>
+                </div>
+                <div class="col-lg-3 tarjeta-producto">
+                    <img src="imagenes/productos/camiseta.jpg" class="imagen-producto">
+                    <h2 class="nombre-producto">Camiseta</h2>
+                    <h4 class="precio-producto">$30.000</h4>
+                    <div class="descripcion-producto">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, laborum sequi reprehenderit exercitationem tempore</p>
+                    </div>
+                    <div class="div-cantidad">
+                        <input class="input-cantidad" id="cantidad_2" type="number">
+                    </div>
+                    <div id="icono" class="div-icono">
+                        <i class="las la-cart-arrow-down icono-grande" onclick="mostrarMensaje()"></i>
+                        <p><b>Agregar al carrito</b></p>
+                    </div>
+                </div>
+                <div class="col-lg-3 tarjeta-producto">
+                    <img src="imagenes/productos/falda.png" class="imagen-producto">
+                    <h2 class="nombre-producto">Falda</h2>
+                    <h4 class="precio-producto">$120.000</h4>
+                    <div class="descripcion-producto">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, laborum sequi reprehenderit exercitationem tempore</p>
+                    </div>
+                    <div class="div-cantidad">
+                        <input class="input-cantidad" id="cantidad_3" type="number">
+                    </div>
+                    <div id="icono" class="div-icono">
+                        <i class="las la-cart-arrow-down icono-grande" onclick="mostrarMensaje()"></i>
+                        <p><b>Agregar al carrito</b></p>
+                    </div>
+                </div>
+                <div class="col-lg-3 tarjeta-producto">
+                    <img src="imagenes/productos/pantalon.jpg" class="imagen-producto">
+                    <h2 class="nombre-producto">Pantalón</h2>
+                    <h4 class="precio-producto">$100.000</h4>
+                    <div class="descripcion-producto">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, laborum sequi reprehenderit exercitationem tempore</p>
+                    </div>
+                    <div class="div-cantidad">
+                        <input class="input-cantidad" id="cantidad_4" type="number">
+                    </div>
+                    <div id="icono" class="div-icono">
+                        <i class="las la-cart-arrow-down icono-grande" onclick="mostrarMensaje()"></i>
+                        <p><b>Agregar al carrito</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row fila-productos">
+                <div class="col-lg-3 tarjeta-producto">
+                    <img src="imagenes/productos/vestido.jpg" class="imagen-producto">
+                    <h2 class="nombre-producto">Vestido</h2>
+                    <h4 class="precio-producto">$150.000</h4>
+                    <div class="descripcion-producto">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, laborum sequi reprehenderit exercitationem tempore</p>
+                    </div>
+                    <div class="div-cantidad">
+                        <input class="input-cantidad" id="cantidad_5" type="number">
+                    </div>
+                    <div id="icono" class="div-icono">
+                        <i class="las la-cart-arrow-down icono-grande" onclick="mostrarMensaje()"></i>
+                        <p><b>Agregar al carrito</b></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
