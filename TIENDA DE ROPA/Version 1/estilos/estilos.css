@@ -1,3 +1,13 @@
+.tarjeta-total {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: white;
+    border: solid;
+    border-radius: 10px;
+}
+
 .imagen-producto {
     max-width: 200px;
     max-height: 100%;
@@ -53,3 +63,59 @@
 .div-cantidad {
     text-align: center;
 }
+
+
+@media (max-width: 575.9px) {
+    .imagen-producto {
+        max-width: 400px;
+        max-height: 100%;
+        border-radius: 30px;
+        padding-right: 10px;
+    }
+
+    .tarjeta-producto {
+        border: solid;
+        border-radius: 30px;
+        padding: 10px;
+        margin: 10px;
+        max-width: 440px !important;
+    }
+
+    .descripcion-producto {
+        max-width: 400px;
+        text-align: center;
+    }
+
+    /*
+    .margen-galeria {
+        margin-left: 50px;
+    }
+    */
+}
+
+/*
+
+@media (min-width: 576px) {
+
+ }
+
+
+@media (min-width: 768px) {
+
+ }
+
+
+@media (min-width: 992px) {
+
+ }
+
+
+@media (min-width: 1200px) {
+
+}
+
+
+@media (min-width: 1400px) {
+
+ }
+ */
