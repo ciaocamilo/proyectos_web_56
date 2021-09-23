@@ -6,6 +6,9 @@
     background: white;
     border: solid;
     border-radius: 10px;
+    margin-right: 5px;
+    margin-top: 120px;
+    padding: 5px
 }
 
 .imagen-producto {
@@ -64,13 +67,16 @@
     text-align: center;
 }
 
+#banner {
+    background-color: #d8a309;
+}
 
 @media (max-width: 575.9px) {
     .imagen-producto {
-        max-width: 400px;
+        max-width: 310px;
         max-height: 100%;
         border-radius: 30px;
-        padding-right: 10px;
+        padding-left: 15px;
     }
 
     .tarjeta-producto {
@@ -78,12 +84,13 @@
         border-radius: 30px;
         padding: 10px;
         margin: 10px;
-        max-width: 440px !important;
+        max-width: 350px !important;
     }
 
     .descripcion-producto {
-        max-width: 400px;
+        max-width: 310px;
         text-align: center;
+        font-size: 25px;
     }
 
     /*
@@ -91,6 +98,16 @@
         margin-left: 50px;
     }
     */
+
+    #navBar {
+        font-size: 15px;
+    }
+
+    .tamano-video {
+        height: auto;
+        width: 350px;
+    }
+
 }
 
 /*
