@@ -1,15 +1,18 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Bienvenidos todos a Vue!!"/>
+  <MiComponente/>
+  <!-- <HelloWorld msg="Bienvenidos todos a Vue!!"/> -->
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import MiComponente from './components/MiComponente.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // HelloWorld,
+    MiComponente
   }
 }
 </script>
