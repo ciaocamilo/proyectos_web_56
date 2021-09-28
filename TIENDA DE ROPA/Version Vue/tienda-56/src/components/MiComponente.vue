@@ -29,11 +29,15 @@
         -->
         <div class="container">
             <div class="row">
-                <div v-for="alimento in alimentos" :key="alimento.id" class="col-lg-4 col-md-6 col-sm-6 col-xs-12 estilo-tarjeta">
-                    <h1>{{ alimento.nombre }} </h1>
-                    <h2>{{ alimento.precio }} </h2>
+                <div v-for="alimento in alimentos" :key="alimento.id" class="col-lg-3 col-md-6 col-sm-6 col-xs-12 estilo-tarjeta">
+                    <h2>{{ alimento.nombre }} </h2>
+                    <h3>{{ alimento.precio }} </h3>
+                    <button type="button" @click="calcularPrecioAcumulado(alimento.precio)">Agregar</button>
                 </div>
             </div>
+        </div>
+        <div class="container">
+            <h3><b>PRECIO TOTAL = </b> {{ precioAcumulado }} </h3>
         </div>
     </div>
 </template>
@@ -60,7 +64,13 @@ export default {
                     nombre: 'Tamal',
                     precio: 5000
                 }
-            ]
+            ],
+            precioAcumulado: 0
+        }
+    },
+    methods: {
+        calcularPrecioAcumulado (precioProducto) {
+            this.precioAcumulado = this.precioAcumulado + precioProducto
         }
     }
 }
