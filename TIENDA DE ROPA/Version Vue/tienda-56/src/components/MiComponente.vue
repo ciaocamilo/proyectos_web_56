@@ -30,6 +30,7 @@
         <div class="container">
             <div class="row">
                 <div v-for="alimento in alimentos" :key="alimento.id" class="col-lg-3 col-md-6 col-sm-6 col-xs-12 estilo-tarjeta">
+                    <img class="img-thumbnail" :src="getPictureComida(alimento.imagen)">
                     <h2>{{ alimento.nombre }} </h2>
                     <h3>{{ alimento.precio }} </h3>
                     <button type="button" @click="calcularPrecioAcumulado(alimento.precio)">Agregar</button>
@@ -52,17 +53,20 @@ export default {
                 {
                     id: 1,
                     nombre: 'Hamburguesa',
-                    precio: 13000
+                    precio: 13000,
+                    imagen: 'hamburguesa.jpg'
                 },
                 {
                     id: 2,
                     nombre: 'Pizza',
-                    precio: 8000
+                    precio: 8000,
+                    imagen: 'pizza.jpg'
                 },
                 {
                     id: 3,
                     nombre: 'Tamal',
-                    precio: 5000
+                    precio: 5000,
+                    imagen: 'tamal.png'
                 }
             ],
             precioAcumulado: 0
@@ -71,6 +75,11 @@ export default {
     methods: {
         calcularPrecioAcumulado (precioProducto) {
             this.precioAcumulado = this.precioAcumulado + precioProducto
+        },
+        getPictureComida (nombre_archivo) {
+            /* Función para cargar imágenes dinámicamente */
+            let images = require.context('@/assets/comida/', false, /\.jpg$|\.png$/)
+            return images('./' + nombre_archivo)
         }
     }
 }
