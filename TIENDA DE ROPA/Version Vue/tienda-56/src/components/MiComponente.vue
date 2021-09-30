@@ -49,7 +49,7 @@ export default {
     name: 'MiComponente',
     data () {
         return {
-            cliente: { nombre: 'Juan', apellido: 'Perez' },
+            cliente: {},
             cantidad: 0,
             alimentos: [
                 {
@@ -99,6 +99,23 @@ export default {
                 console.log(status_peticion)
                 alert(mensaje)
             })
+        }
+    },
+    created () {
+        console.log("Created")
+        this.cliente = {nombre: 'Juan', apellido: 'Perez'}
+    },
+    mounted () {
+        console.log("Mounted")
+        // this.enviarCliente()
+    },
+    watch: {
+        cantidad (newVal, oldVal) {
+            console.log(oldVal)
+            console.log(newVal)
+            if (newVal === 5) {
+                alert('Es cinco!')
+            }
         }
     }
 }
