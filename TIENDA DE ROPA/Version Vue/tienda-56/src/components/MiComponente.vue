@@ -6,6 +6,7 @@
             <div class="row">
                 <div>
                     <input type="text" v-model="cliente.nombre">
+                    <button type="button" @click="enviarCliente()">Enviar cliente</button>
                 </div>
                 <div>
                     <input type="number" v-model="cantidad">
@@ -43,6 +44,7 @@
     </div>
 </template>
 <script>
+import axios from 'axios'
 export default {
     name: 'MiComponente',
     data () {
@@ -80,6 +82,23 @@ export default {
             /* Función para cargar imágenes dinámicamente */
             let images = require.context('@/assets/comida/', false, /\.jpg$|\.png$/)
             return images('./' + nombre_archivo)
+        },
+        enviarCliente () {
+            axios.post('https://reqbin.com/echo/post/json',
+            {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            },
+            {
+                data: this.cliente
+            })
+            .then(response => {
+                let status_peticion = response.status
+                let mensaje = response.data
+                console.log(status_peticion)
+                alert(mensaje)
+            })
         }
     }
 }
