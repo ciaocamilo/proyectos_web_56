@@ -1,18 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <MiComponente/>
+  <!-- <img alt="Vue logo" src="./assets/logo.png">
+  <MiComponente/> -->
   <!-- <HelloWorld msg="Bienvenidos todos a Vue!!"/> -->
+  <router-link to="/">Inicio</router-link>|
+  <router-link :to="{name: 'PaginaPrueba'}">Página prueba</router-link>
+  <router-view/>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import MiComponente from './components/MiComponente.vue'
+// import MiComponente from './components/MiComponente.vue'
 
 export default {
   name: 'App',
   components: {
     // HelloWorld,
-    MiComponente
+    // MiComponente
   }
 }
 </script>
