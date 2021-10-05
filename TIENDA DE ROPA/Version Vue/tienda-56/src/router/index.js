@@ -5,6 +5,7 @@ import PaginaPrueba from "@/views/Prueba.vue"
 import NotFound from "@/views/NotFound.vue"
 import Clientes from "@/views/Clientes.vue"
 import Productos from "@/views/Productos.vue"
+import Carrito from "@/views/Carrito.vue"
 
 const routes = [
     {
@@ -26,6 +27,11 @@ const routes = [
         path: "/productos",
         name: "Productos",
         component: Productos
+    },
+    {
+        path: "/carrito/:total",
+        name: "Carrito",
+        component: Carrito
     },
     {
         path: "/:catchAll(.*)",

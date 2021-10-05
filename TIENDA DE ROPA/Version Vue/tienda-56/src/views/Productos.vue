@@ -23,6 +23,10 @@
         <div id=div_total class="tarjeta-total">
             <h1><b>TOTAL</b></h1>
             <h2 id="total_carrito">${{total_carrito}}</h2>
+            <div id="icono" class="div-icono">
+                <i class="las la-shopping-bag icono-grande" @click="irCarrito()"></i>
+                <p><b>Ir al carrito</b></p>
+            </div>
         </div>
     </div>
 </template>
@@ -89,6 +93,10 @@ export default {
                 'Se ha agregado ' + producto.nombre + ' al carrito de compras',
                 'success'
             )
+        },
+        irCarrito () {
+            let ruta = `/carrito/${this.total_carrito}`
+            this.$router.push(ruta)
         }
     }
 }
