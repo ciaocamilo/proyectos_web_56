@@ -1,23 +1,5 @@
 <template>
     <div id="contenido">
-        <div id="banner">
-            <div class="container">
-                <h1 class="titulos">Tienda 56</h1>
-                <h3>Mi tienda de Ropa</h3>
-            </div>
-            <img src="@/assets/banner.jpg" style="width: 100%;height: auto" width="100%" alt="Banner de la tienda">
-        </div>
-        <div id="seccion_menu">
-            <table id="navBar">
-                <tr>
-                    <th><a href="index.html">Inicio</a></th>
-                    <th><a href="clientes.html" >Clientes</a></th>
-                    <th><a href="productos.html">Productos</a></th>
-                    <th><a href="carrito.html">Carrito de compras</a></th>
-                </tr>
-            </table>
-        </div>
-        <br>
         <div class="container-fluid" id="parrafo">
             <p>
                 Bienvenidos a la <b>tienda 56</b>, su mejor tienda en linea
@@ -32,3 +14,14 @@
         <p><a href="mailto:micorreo@misiontic.edu">micorreo@misiontic.edu</a></p>
     </footer>
 </template>
+<script>
+export default {
+
+}
+</script>
+<style scoped>
+    .titulos {
+        font-family: verdana;
+        font-size: 60px;
+    }
+</style>
