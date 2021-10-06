@@ -44,6 +44,55 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Consultar Productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombres\": \"Juan\",\r\n    \"apellidos\": \"Perez\",\r\n    \"fecha_nacimiento\": \"05/09/1999\",\r\n    \"correo\": \"micorreo@servidor.com\",\r\n    \"edad\": 22,\r\n    \"direccion\": \"La avenida\",\r\n    \"tratamiento\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/nuevo-cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"nuevo-cliente"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
