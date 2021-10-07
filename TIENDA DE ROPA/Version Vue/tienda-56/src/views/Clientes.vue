@@ -9,6 +9,10 @@
                     <form>
                         <br>
                         <div class="campos-formulario form-group">
+                            <label>Identificació<noframes></noframes></label>
+                            <input v-model="cliente.identificacion" type="text" class="form-control" id="identificacion" name="identificacion" placeholder="Ingrese su identificacion" required>
+                        </div>
+                        <div class="campos-formulario form-group">
                             <label>Nombres</label>
                             <input v-model="cliente.nombres" type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
                         </div>
@@ -51,10 +55,12 @@
     </div>
 </template>
 <script>
+import axios from 'axios'
 export default {
     data () {
         return {
             cliente: {
+                identificacion: '',
                 nombres: '',
                 apellidos: '',
                 fecha_nacimiento: '',
@@ -67,7 +73,29 @@ export default {
     },
     methods: {
         registrarCliente () {
-            console.log(this.cliente)
+            axios.post('http://localhost:3000/api/nuevo-cliente',
+            {
+                data: this.cliente
+            })
+            .then(response => {
+                let status_peticion = response.status
+                let mensaje = response.data
+                if (status_peticion === 200) {
+                    this.$swal.fire(
+                        'Cliente registrado',
+                        'Se ha registrado el cliente con identificación ' + this.cliente.identificacion,
+                        'success'
+                    )
+                    this.cliente = {}
+                } else {
+                    this.$swal.fire(
+                        'Cliente NO registrado',
+                        'Ocurrió un error al registrar el cliente con identificación ' + this.cliente.identificacion,
+                        'error'
+                    )
+                }
+                console.log(mensaje)
+            })
         }
     }
 }
