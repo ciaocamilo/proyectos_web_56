@@ -6,6 +6,7 @@ import NotFound from "@/views/NotFound.vue"
 import Clientes from "@/views/Clientes.vue"
 import Productos from "@/views/Productos.vue"
 import Carrito from "@/views/Carrito.vue"
+import EditarCliente from "@/views/EditarCliente.vue"
 
 const routes = [
     {
@@ -22,6 +23,11 @@ const routes = [
         path: "/clientes",
         name: "Clientes",
         component: Clientes
+    },
+    {
+        path: "/clientes/editar",
+        name: "EditarCliente",
+        component: EditarCliente
     },
     {
         path: "/productos",
