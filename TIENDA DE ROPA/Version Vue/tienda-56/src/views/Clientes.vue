@@ -74,7 +74,7 @@ export default {
     },
     methods: {
         registrarCliente () {
-            axios.post('http://localhost:3000/api/nuevo-cliente',
+            axios.post('https://tienda-56-api.herokuapp.com/api/nuevo-cliente',
             {
                 data: this.cliente
             })

@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-    <h1>Mi página de prueba</h1><br>
+    <h1>Mi primera página de prueba</h1><br>
     <MiComponente/>
 </div>
 </template>
